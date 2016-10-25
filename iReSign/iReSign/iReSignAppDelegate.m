@@ -746,7 +746,7 @@ static NSString *kiTunesMetadataFileName            = @"iTunesMetadata";
 
 - (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index {
     id item = nil;
-    if ([aComboBox isEqual:certComboBox]) {
+    if ([aComboBox isEqual:certComboBox] && index >= 0 && index < certComboBoxItems.count) {
         item = [certComboBoxItems objectAtIndex:index];
     }
     return item;
